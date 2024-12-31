@@ -171,6 +171,50 @@ ReActNet-MobileNet achieves an optimal balance between **accuracy** and **effici
 - Lightweight model architecture suitable for real-time DeepFake detection.
 - Efficient performance on resource-constrained devices without compromising accuracy.
 
+---
+
+## Experimental Setup
+
+The experimental setup outlines the training process and evaluation metrics used to fine-tune and validate the deepfake detection model.
+
+---
+
+### Training Process
+
+The training process was designed to assess the model's ability to detect deepfakes effectively across varying epochs and conditions. Key details include:
+
+- **Initial Training Phase:**
+  - **Optimizer:** Adam
+  - **Learning Rate:** 0.001
+  - **Batch Size:** 32
+  - **Epochs:** 5, 15, 30, and 50
+  - Forward and backward passes were iteratively applied to optimize weights, minimizing cross-entropy loss.
+  - **Monitoring:** Training and validation accuracies and losses were recorded at each epoch to analyze learning patterns and detect potential overfitting.
+
+- **Fine-Tuning Phase:**
+  - **Learning Rate:** Reduced to 0.0001.
+  - **Early Stopping:** Implemented to halt training when signs of overfitting were detected.
+  - Results from fine-tuning were compared with those from the initial training phase for performance benchmarking.
+
+---
+
+### Evaluation Metrics
+
+A comprehensive set of evaluation metrics was used to measure and understand the model's performance:
+
+- **Accuracy:** Percentage of correctly identified real and fake instances in training, validation, and test datasets.
+- **Loss:** Measures the discrepancy between model predictions and actual labels, offering insights into optimization efficiency.
+- **Test Accuracy:** Assesses the model's generalization capability to unseen data, highlighting overfitting or underfitting tendencies.
+- **Sensitivity and Specificity:** While not explicitly calculated, validation and test accuracy patterns provided indirect insights into the balance between true positives and true negatives.
+
+#### Metric Monitoring:
+- **Validation Metrics:** Computed after each epoch to evaluate the model’s ability to generalize beyond the training data.
+- **Test Metrics:** Recorded after the completion of each training phase for a robust evaluation of model performance.
+
+This combination of metrics ensures a thorough understanding of the model's strengths and limitations under various configurations, enabling a refined approach to deepfake detection.
+
+---
+
 ## Contributors
 This project is developed and maintained by:
 - [Huzaifah Tariq Ahmed](https://github.com/huzaifahtariqahmed)
