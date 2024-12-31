@@ -235,7 +235,7 @@ The convolutional neural network (CNN) model was trained with the Adam optimizer
 
 These results indicate steady learning progress and good generalization after 5 epochs.
 
-![Five Epoch Training Result](placeholder_for_5_epoch_plot)
+![Five Epoch Training Result](/Images/5_epoch.png)
 
 ---
 
@@ -247,7 +247,7 @@ These results indicate steady learning progress and good generalization after 5 
 
 Minor fluctuations in validation loss were observed, suggesting potential onset of overfitting.
 
-![Fifteen Epoch Training Result](placeholder_for_15_epoch_plot)
+![Fifteen Epoch Training Result](/Images/15_epoch.png)
 
 ---
 
@@ -259,7 +259,7 @@ Minor fluctuations in validation loss were observed, suggesting potential onset 
 
 Substantial performance improvement was observed, though overfitting became more evident.
 
-![Thirty Epoch Training Result](placeholder_for_30_epoch_plot)
+![Thirty Epoch Training Result](/Images/30_epoch.png)
 
 ---
 
@@ -271,7 +271,7 @@ Substantial performance improvement was observed, though overfitting became more
 
 Overfitting was evident as test accuracy decreased to **61.45%**, compared to **63.7%** achieved with the 30-epoch model.
 
-![Fifty Epoch Training Result](placeholder_for_50_epoch_plot)
+![Fifty Epoch Training Result](/Images/50_epoch.png)
 
 ---
 
@@ -287,7 +287,7 @@ Fine-tuning was conducted with a reduced learning rate of 0.0001. Early stopping
 
 Fine-tuning did not improve generalization but instead led to poorer performance.
 
-![Fine-Tuned Training Result](placeholder_for_fine_tune_plot)
+![Fine-Tuned Training Result](/Images/fine_tune_epoch.png)
 
 ---
 
