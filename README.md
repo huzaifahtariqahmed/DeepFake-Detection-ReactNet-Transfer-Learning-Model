@@ -109,12 +109,11 @@ Testing Set: 1,000 real frames, 1,000 fake frames.
 
 The following tools and technologies were used for dataset preparation:
 
-Python: Programming language for automation and preprocessing.
-OpenCV: For video-to-frame conversion.
-OS & Shutil Libraries: For file and directory management.
-Random Library: For balanced random sampling.
-PyTorch: Ensured compatibility for model training.
-
+- Python: Programming language for automation and preprocessing.
+- OpenCV: For video-to-frame conversion.
+- OS & Shutil Libraries: For file and directory management.
+- Random Library: For balanced random sampling.
+- PyTorch: Ensured compatibility for model training.
 
 ## Contributors
 This project is developed and maintained by:
