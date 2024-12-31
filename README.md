@@ -9,7 +9,9 @@ By fine-tuning ReActNet on the **Celeb-DF (v2)** dataset [\[Li et al., 2020\]](h
 
 ---
 
-## Dataset Preparation
+## Dataset Preparation 
+
+Our Jupyter Notebook for this can be found [here](https://github.com/huzaifahtariqahmed/DeepFake-Detection-ReactNet-Transfer-Learning-Model/blob/main/Dataset%20preparation%20and%20preprocessing.ipynb).
 
 ### Dataset Overview
 The dataset used for this study is the **Celeb-DF (v2)** dataset, a widely recognized benchmark for DeepFake detection. It consists of both real and fake videos collected from various sources:
