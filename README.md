@@ -121,6 +121,8 @@ The following tools and technologies were used for dataset preparation:
 
 ## ReActNet-MobileNet Architecture
 
+The Model can be downloaded from [here](https://drive.google.com/drive/folders/1aNPHz4CZEC1h_6q-CeqCyWGgFWJmJXRN?usp=share_link).
+
 The **ReActNet-MobileNet** model leverages **MobileNetV2** as a lightweight backbone for feature extraction, making it well-suited for mobile and embedded systems. By incorporating efficient architectural choices, this model significantly reduces computational costs while maintaining high accuracy, making it ideal for resource-constrained environments.
 
 ---
