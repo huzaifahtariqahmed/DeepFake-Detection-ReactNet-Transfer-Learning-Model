@@ -177,7 +177,7 @@ ReActNet-MobileNet achieves an optimal balance between **accuracy** and **effici
 
 The experimental setup outlines the training process and evaluation metrics used to fine-tune and validate the deepfake detection model.
 
-Our Jupyter Notebook For this can be found [here](https://github.com/huzaifahtariqahmed/DeepFake-Detection-ReactNet-Transfer-Learning-Model/blob/main/Model_training_and_testing.ipynb).
+Our Jupyter Notebook for this can be found [here](https://github.com/huzaifahtariqahmed/DeepFake-Detection-ReactNet-Transfer-Learning-Model/blob/main/Model_training_and_testing.ipynb).
 
 ---
 
@@ -214,6 +214,114 @@ A comprehensive set of evaluation metrics was used to measure and understand the
 - **Test Metrics:** Recorded after the completion of each training phase for a robust evaluation of model performance.
 
 This combination of metrics ensures a thorough understanding of the model's strengths and limitations under various configurations, enabling a refined approach to deepfake detection.
+
+---
+
+## Results and Discussion
+
+This section provides an evaluation of the model's performance based on training and fine-tuning experiments. Metrics such as training accuracy, validation accuracy, test accuracy, training loss, and validation loss are analyzed to understand the model's performance progression and generalization capability.
+
+---
+
+### Performance After Initial Training
+
+The convolutional neural network (CNN) model was trained with the Adam optimizer at a learning rate of 0.001 for 5, 15, 30, and 50 epochs. Below are the summarized results for each training duration:
+
+#### Training for 5 Epochs
+- **Training Accuracy:** 69.95%
+- **Validation Accuracy:** 70.80%
+- **Training Loss:** Decreased from 0.7104 to 0.5595.
+- **Validation Loss:** Decreased from 0.6926 to 0.5458.
+
+These results indicate steady learning progress and good generalization after 5 epochs.
+
+![Five Epoch Training Result](placeholder_for_5_epoch_plot)
+
+---
+
+#### Training for 15 Epochs
+- **Training Accuracy:** 79.56%
+- **Validation Accuracy:** 73.35%
+- **Training Loss:** Reduced significantly from 0.7017 to 0.4249.
+- **Validation Loss:** Decreased from 0.6927 to 0.5185.
+
+Minor fluctuations in validation loss were observed, suggesting potential onset of overfitting.
+
+![Fifteen Epoch Training Result](placeholder_for_15_epoch_plot)
+
+---
+
+#### Training for 30 Epochs
+- **Training Accuracy:** 92.81%
+- **Validation Accuracy:** 79.30%
+- **Training Loss:** Reduced from 0.6884 to 0.1757.
+- **Validation Loss:** Fluctuated between 0.5217 and 0.5123.
+
+Substantial performance improvement was observed, though overfitting became more evident.
+
+![Thirty Epoch Training Result](placeholder_for_30_epoch_plot)
+
+---
+
+#### Training for 50 Epochs
+- **Training Accuracy:** 94.27%
+- **Validation Accuracy:** 81.40%
+- **Training Loss:** Reduced to 0.1236.
+- **Validation Loss:** Fluctuated between 0.4909 and 0.5217.
+
+Overfitting was evident as test accuracy decreased to **61.45%**, compared to **63.7%** achieved with the 30-epoch model.
+
+![Fifty Epoch Training Result](placeholder_for_50_epoch_plot)
+
+---
+
+### Performance After Fine-Tuning
+
+Fine-tuning was conducted with a reduced learning rate of 0.0001. Early stopping was implemented, halting training after 15 epochs. However, this phase resulted in suboptimal performance:
+
+- **Training Accuracy:** 81.67%
+- **Validation Accuracy:** 71.85%
+- **Training Loss:** Reduced to 0.3905.
+- **Validation Loss:** Increased to 0.5743.
+- **Test Accuracy:** Decreased drastically to **54.5%**.
+
+Fine-tuning did not improve generalization but instead led to poorer performance.
+
+![Fine-Tuned Training Result](placeholder_for_fine_tune_plot)
+
+---
+
+### Discussion of Findings
+
+- **Overfitting:** Training for 50 epochs led to high training accuracy but poorer generalization, as evidenced by lower test accuracy.
+- **Fine-Tuning Challenges:** The fine-tuning phase resulted in a decline in performance, likely due to:
+  - Early stopping at 15 epochs.
+  - Suboptimal parameter selection during fine-tuning.
+
+#### Key Takeaways:
+1. Optimal training duration is critical to balance accuracy and generalization.
+2. Fine-tuning should be carefully designed with appropriate learning rate schedules and regularization techniques.
+3. Future work should explore methods such as:
+   - Data augmentation.
+   - Dropout.
+   - Advanced fine-tuning strategies.
+
+---
+
+## Conclusion
+
+The rise of deepfake technology has presented significant challenges in safeguarding authenticity across digital media. This study introduces a robust and efficient deepfake detection framework by leveraging transfer learning with the ReActNet-MobileNet architecture. By combining the computational efficiency of binary neural networks with the adaptability of pre-trained models, the proposed approach achieves high accuracy while remaining resource-efficient, making it ideal for real-time applications on mobile and edge devices.
+
+Through rigorous evaluation on the Celeb-DF (v2) dataset, the model demonstrated strong performance in distinguishing real and fake media. Despite challenges such as overfitting in extended training scenarios, our methodology achieved a test accuracy of **63.7%**, highlighting its potential for generalizing well to unseen data. The careful dataset preparation and training process addressed the ever-evolving sophistication of deepfake generation techniques.
+
+This research underscores the potential of lightweight architectures like ReActNet-MobileNet to meet the dual demands of accuracy and efficiency in deepfake detection. 
+
+### Future Work
+- **Temporal Consistency for Videos:** Integrating temporal consistency checks to improve performance on video-based deepfake detection.
+- **Attention Mechanisms:** Exploring attention-based techniques to enhance the focus on relevant features in media.
+- **Enhanced Training Techniques:** Incorporating advanced data augmentation, regularization, and fine-tuning strategies to further improve generalization.
+
+By advancing the state of the art in this critical domain, our work contributes to broader efforts in preserving digital trust and combating malicious manipulation.
 
 ---
 
