@@ -115,6 +115,60 @@ The following tools and technologies were used for dataset preparation:
 - Random Library: For balanced random sampling.
 - PyTorch: Ensured compatibility for model training.
 
+## ReActNet-MobileNet Architecture
+
+The **ReActNet-MobileNet** model leverages **MobileNetV2** as a lightweight backbone for feature extraction, making it well-suited for mobile and embedded systems. By incorporating efficient architectural choices, this model significantly reduces computational costs while maintaining high accuracy, making it ideal for resource-constrained environments.
+
+---
+
+### MobileNetV2 Backbone
+**MobileNetV2** is a convolutional neural network (CNN) designed for efficient feature extraction. Key features:
+- Uses **depthwise separable convolutions** to reduce computational overhead while preserving accuracy.
+- Pre-trained on the **ImageNet** dataset for robust feature learning.
+- Fine-tuned for the DeepFake detection task by replacing the last fully connected layer for binary classification (real vs fake).  
+[Learn more about MobileNetV2 here](https://arxiv.org/abs/1801.04381).
+
+---
+
+### Generalized Activation
+To enhance the precision of binary neural networks (BNNs), ReActNet incorporates **generalized activation functions**:
+- **RSign (Relaxed Sign):** Allows explicit learning of the distribution reshape and shift at minimal computational cost.
+- **RPReLU (Relaxed Parametric ReLU):** Improves non-linear transformations for better representation.  
+
+This combination improves performance by enabling accurate predictions with binarized weights and activations.  
+[Learn more in Liu et al., 2020](https://arxiv.org/abs/2003.03488).
+
+---
+
+### Binary Quantization
+Binary quantization is a core feature of ReActNet, applied to both weights and activations:
+- **Advantages:**
+  - Reduces model size significantly.
+  - Lowers computational complexity.
+  - Enables real-time processing.
+- This quantization ensures efficiency while maintaining high accuracy in distinguishing real vs fake media.
+
+---
+
+### Final Classification Layer
+The classification process involves:
+1. Extracted features from MobileNetV2 and activation layers.
+2. A fully connected layer to classify media into two classes:
+   - **Real**
+   - **Fake**
+3. A **softmax function** at the final layer to compute probabilities for each class.
+
+---
+
+### Efficiency and Performance
+ReActNet-MobileNet achieves an optimal balance between **accuracy** and **efficiency**:
+- **Lower Floating Point Operations (FLOPs):** Enables deployment on mobile and embedded devices.
+- Trained for high classification accuracy while maintaining low computational overhead.
+
+#### Key Highlights:
+- Lightweight model architecture suitable for real-time DeepFake detection.
+- Efficient performance on resource-constrained devices without compromising accuracy.
+
 ## Contributors
 This project is developed and maintained by:
 - [Huzaifah Tariq Ahmed](https://github.com/huzaifahtariqahmed)
