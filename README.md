@@ -177,6 +177,8 @@ ReActNet-MobileNet achieves an optimal balance between **accuracy** and **effici
 
 The experimental setup outlines the training process and evaluation metrics used to fine-tune and validate the deepfake detection model.
 
+Our Jupyter Notebook For this can be found [here](https://github.com/huzaifahtariqahmed/DeepFake-Detection-ReactNet-Transfer-Learning-Model/blob/main/Model_training_and_testing.ipynb).
+
 ---
 
 ### Training Process
